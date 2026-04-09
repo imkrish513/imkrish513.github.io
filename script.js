@@ -1,6 +1,42 @@
 // Intersection Observer for fade-in animations (optional enhancement)
 document.addEventListener('DOMContentLoaded', () => {
     
+    // Typewriter effect
+    const typewriterElement = document.getElementById("typewriter-text");
+    if (typewriterElement) {
+        const words = ["AI Developer", "Full Stack Engineer", "UI/UX Designer", "Software Innovator"];
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function type() {
+            const currentWord = words[wordIndex];
+            
+            if (isDeleting) {
+                charIndex--;
+            } else {
+                charIndex++;
+            }
+
+            typewriterElement.textContent = currentWord.substring(0, charIndex);
+
+            let typeSpeed = isDeleting ? 40 : 100;
+
+            if (!isDeleting && charIndex === currentWord.length) {
+                typeSpeed = 2000; // Pause at end of word
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                typeSpeed = 400; // Pause before next word
+            }
+
+            setTimeout(type, typeSpeed);
+        }
+        
+        type();
+    }
+
     // Select all sections that we might want to fade in
     const sections = document.querySelectorAll('.section');
     

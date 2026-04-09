@@ -111,24 +111,15 @@ p {
     padding: 0 5%;
 }
 
-/* Navigation Pill */
+/* Transparent Top Navbar */
 .navbar {
     position: fixed;
     top: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 5%;
+    right: 5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 90%;
-    max-width: 1000px;
-    background-color: var(--nav-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    padding: 0.75rem 1.5rem;
-    border-radius: 9999px;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
     z-index: 100;
 }
 
@@ -186,25 +177,34 @@ p {
     display: flex;
     align-items: center;
     position: relative;
-    padding-top: 6rem; /* Account for navbar */
+    padding-top: 12rem; /* Provide large clearance for the navbar */
+    padding-bottom: 4rem;
 }
 
 .hero-content {
     max-width: 800px;
     position: relative;
+    margin-left: 10vw; /* Indent title to match reference */
     z-index: 2;
 }
 
 .hero-eyebrow {
+    position: absolute;
+    top: -5rem;
+    left: -10vw; /* Place typewriter text out to the left */
     display: inline-flex;
     align-items: center;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 0.3em;
     text-transform: uppercase;
     color: var(--text-secondary);
-    margin-bottom: 2rem;
     min-height: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .hero-content { margin-left: 0; }
+    .hero-eyebrow { position: relative; top: 0; left: 0; margin-bottom: 2rem; }
 }
 
 .cursor {

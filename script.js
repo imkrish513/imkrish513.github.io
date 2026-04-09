@@ -64,9 +64,19 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(section);
     });
 
-    // Subtly parallax the grid background
+    // Scroll effects: Navbar morph + parallax grid
+    const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
         const scrolled = window.scrollY;
+        
+        if (navbar) {
+            if (scrolled > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        }
+
         const bgGrid = document.querySelector('.bg-grid');
         if (bgGrid) {
             bgGrid.style.transform = `translateY(${scrolled * 0.05}px)`;

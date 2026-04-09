@@ -1,63 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Directory</title>
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Quintessential&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Quintessential&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- Faint background grid overlay -->
     <div class="bg-grid"></div>
 
-    <!-- Floating Navbar -->
+    <!-- Morphing Navbar -->
     <nav class="navbar">
-        <div class="nav-brand">PORTFOLIO.</div>
+        <div class="nav-brand">KP<span class="accent">.</span></div>
         <ul class="nav-links">
             <li><a href="#about">ABOUT</a></li>
-            <li><a href="#projects">WORK</a></li>
             <li><a href="#awards">AWARDS</a></li>
+            <li><a href="#projects">WORKS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
         </ul>
-        <a href="#contact" class="btn btn-outline">LET'S TALK</a>
+        <a href="#contact" class="btn btn-black-small shadow-sm">CONTACT</a>
     </nav>
 
     <main class="content">
         <!-- Hero Section -->
         <section class="hero" id="home">
-            <div class="hero-content">
-                <div class="hero-eyebrow">
-                    <span id="typewriter-text"></span><span class="cursor"></span>
+            <div class="hero-content"
+                style="width: 100%; display: flex; flex-direction: column; justify-content: center;">
+                <div class="hero-top">
+                    <div class="hero-eyebrow">
+                        <span id="typewriter-text"></span><span class="cursor"></span>
+                    </div>
+                    <h1 class="hero-title">
+                        Krish <span class="accent" style="text-transform:lowercase">patel</span>
+                    </h1>
                 </div>
-                <h1 class="hero-title">
-                    <span class="title-block">CREATING</span>
-                    <span class="title-block">
-                        modern <span class="accent">experiences</span>
-                    </span>
-                </h1>
-                <p class="hero-desc">Full-Stack Developer building fast, responsive, and beautiful web applications.</p>
-                <div class="hero-actions">
-                    <a href="#projects" class="btn btn-primary">VIEW WORK</a>
-                    <a href="https://github.com/imkrish513" target="_blank" class="btn btn-icon">GITHUB</a>
+
+                <div class="hero-bottom flex-row">
+                    <div class="hero-desc-large">
+                        <span class="faded">Building</span> intelligent interfaces <br>
+                        <span class="faded">where</span> <span class="accent">great design</span> meets <br>
+                        <span style="font-weight: 500; font-style: italic;">GenAI-powered</span> engineering.
+                    </div>
+
+                    <div class="hero-actions-container">
+                        <!-- Rotating Badge -->
+                        <div class="hero-badge-rel">
+                            <svg viewBox="0 0 100 100" class="rotating-text">
+                                <path d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" id="circle"
+                                    fill="none" />
+                                <text>
+                                    <textPath xlink:href="#circle" fill="currentColor">• AI • AUTOMATION • DESIGN •
+                                        ENGINEERING </textPath>
+                                </text>
+                            </svg>
+                            <div class="badge-center">✦</div>
+                        </div>
+
+                        <div class="action-buttons-stack">
+                            <a href="#projects" class="btn btn-black-pill">EXPLORE WORKS <span>↘</span></a>
+                            <a href="#" class="btn btn-outline-pill">DOWNLOAD CV <span>↓</span></a>
+                            <div class="social-circles">
+                                <a href="https://github.com/imkrish513" target="_blank" class="social-circle">GH</a>
+                                <a href="https://www.linkedin.com/in/patelkrish513/" target="_blank"
+                                    class="social-circle">LI</a>
+                                <a href="mailto:imkrish513@gmail.com" class="social-circle">EM</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            
-            <!-- Rotating Badge / Decal -->
-            <div class="hero-badge">
-                <svg viewBox="0 0 100 100" class="rotating-text">
-                    <path d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" id="circle" fill="none"/>
-                    <text>
-                        <textPath xlink:href="#circle" fill="currentColor">
-                            • ENGINEERING • DESIGN • AI • WEB •
-                        </textPath>
-                    </text>
-                </svg>
-                <div class="badge-center">✦</div>
             </div>
         </section>
 
@@ -67,13 +88,16 @@
             <div class="about-grid">
                 <div class="about-image">
                     <!-- Added user's headshot if available -->
-                    <img src="headshot.jpeg" alt="Headshot" onerror="this.src='https://via.placeholder.com/600x800/eeeeee/cccccc?text=Photo+Placeholder'">
+                    <img src="headshot.jpeg" alt="Headshot"
+                        onerror="this.src='https://via.placeholder.com/600x800/eeeeee/cccccc?text=Photo+Placeholder'">
                 </div>
                 <div class="about-text">
                     <h2>Hello, I'm a <span class="accent">developer</span>.</h2>
-                    <p>I specialize in bridging the gap between design and functional engineering. Using modern web frameworks and AI tools, I create digital experiences that feel polished and perform flawlessly.</p>
+                    <p>I specialize in bridging the gap between design and functional engineering. Using modern web
+                        frameworks and AI tools, I create digital experiences that feel polished and perform flawlessly.
+                    </p>
                     <p>When I'm not writing code, I enjoy learning new technologies and competing in hackathons.</p>
-                    
+
                     <div class="skills-container">
                         <h3>CORE TECHNOLOGIES</h3>
                         <div class="skills-list">
@@ -91,38 +115,84 @@
 
         <!-- Projects Section -->
         <section class="section projects" id="projects">
-            <div class="section-label">02 / WORK</div>
-            <h2 class="section-title">Selected <span class="accent">Projects</span></h2>
-            
-            <div class="projects-grid">
+            <div class="section-title-center">
+                <h2>PROJECT</h2>
+                <h2 class="accent-title"><span class="accent">gallery</span></h2>
+            </div>
+
+            <div class="projects-list">
                 <!-- Project 1 -->
-                <div class="project-card">
-                    <div class="project-num">01</div>
-                    <div class="project-image">
-                        <img src="https://via.placeholder.com/800x600/f3f4f6/cccccc?text=Project+Alpha" alt="Project 1">
-                    </div>
-                    <div class="project-info">
-                        <h3>Project Alpha</h3>
-                        <p>An AI-powered SaaS platform providing seamless content generation.</p>
-                        <div class="project-tags">
-                            <span>React</span>
-                            <span>OpenAI</span>
+                <div class="project-row">
+                    <div class="project-content-col">
+                        <div class="project-tags-top">
+                            <span class="orange-dot">•</span> GENAI <span class="orange-dot">•</span> CAREER <span
+                                class="orange-dot">•</span> COPILOT
                         </div>
+                        <h3 class="project-name">IntervUe</h3>
+
+                        <div class="project-desc-wrapper">
+                            <div class="project-faint-num">01</div>
+                            <p class="project-desc">
+                                Intervue leverages Google's Gemini AI to provide deep, contextual interview preparation
+                                tailored to your unique skills and target roles. Built with a modern MERN stack and
+                                Redis-powered caching, the platform delivers lightning-fast analysis, real-time job
+                                matching via Apify, and ATS-optimized resume generation — all through a sleek,
+                                responsive interface designed for the next generation of job seekers.
+                            </p>
+                        </div>
+
+                        <div class="project-features">
+                            <h4>MAIN PORTIONS</h4>
+                            <p>Contextual Interviews • Real-time Job Matching • ATS Optimisation</p>
+                        </div>
+
+                        <div class="project-stack">
+                            <span class="stack-pill">REACT</span>
+                            <span class="stack-pill">NODE.JS</span>
+                            <span class="stack-pill">MONGODB</span>
+                            <span class="stack-pill">REDIS</span>
+                            <span class="stack-pill">GEMINI AI</span>
+                        </div>
+                    </div>
+                    <div class="project-visual">
+                        <img src="https://via.placeholder.com/1200x800/d1d5db/a3a8b4?text=IntervUe+Screenshot"
+                            alt="IntervUe Interface">
                     </div>
                 </div>
+
                 <!-- Project 2 -->
-                <div class="project-card">
-                    <div class="project-num">02</div>
-                    <div class="project-image">
-                        <img src="https://via.placeholder.com/800x600/f3f4f6/cccccc?text=Project+Beta" alt="Project 2">
-                    </div>
-                    <div class="project-info">
-                        <h3>Project Beta</h3>
-                        <p>Full-stack e-commerce marketplace featuring real-time bidding.</p>
-                        <div class="project-tags">
-                            <span>Next.js</span>
-                            <span>Node.js</span>
+                <div class="project-row">
+                    <div class="project-content-col">
+                        <div class="project-tags-top">
+                            <span class="orange-dot">•</span> ECOMMERCE <span class="orange-dot">•</span> REAL-TIME
+                            <span class="orange-dot">•</span> MARKETPLACE
                         </div>
+                        <h3 class="project-name">MarketBeta</h3>
+
+                        <div class="project-desc-wrapper">
+                            <div class="project-faint-num">02</div>
+                            <p class="project-desc">
+                                Full-stack e-commerce marketplace featuring real-time bidding, integrated payment
+                                processing, and scalable architecture designed to handle thousands of concurrent users
+                                seamlessly.
+                            </p>
+                        </div>
+
+                        <div class="project-features">
+                            <h4>MAIN PORTIONS</h4>
+                            <p>Live Bidding • Secure Checkout • Analytics Dashboard</p>
+                        </div>
+
+                        <div class="project-stack">
+                            <span class="stack-pill">NEXT.JS</span>
+                            <span class="stack-pill">TYPESCRIPT</span>
+                            <span class="stack-pill">POSTGRESQL</span>
+                            <span class="stack-pill">SOCKET.IO</span>
+                        </div>
+                    </div>
+                    <div class="project-visual">
+                        <img src="https://via.placeholder.com/1200x800/d1d5db/a3a8b4?text=MarketBeta+Screenshot"
+                            alt="MarketBeta Interface">
                     </div>
                 </div>
             </div>
@@ -132,7 +202,7 @@
         <section class="section awards" id="awards">
             <div class="section-label">03 / AWARDS</div>
             <h2 class="section-title">Hackathons & <span class="accent">Honors</span></h2>
-            
+
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
@@ -152,19 +222,18 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- Contact / Footer -->
         <footer class="footer" id="contact">
             <div class="footer-content">
                 <h2>Let's build something <span class="accent">amazing</span>.</h2>
-                <a href="mailto:hello@example.com" class="btn btn-primary btn-large">GET IN TOUCH</a>
+                <a href="mailto:imkrish513@gmail.com" class="btn btn-primary btn-large">GET IN TOUCH</a>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Portfolio. Designed with passion.</p>
+                <p>&copy; 2026 Krish Patel</p>
                 <div class="social-links">
-                    <a href="#">LinkedIn</a>
-                    <a href="#">GitHub</a>
-                    <a href="#">Twitter</a>
+                    <a href="https://www.linkedin.com/in/patelkrish513/">LinkedIn</a>
+                    <a href="https://github.com/imkrish513">GitHub</a>
                 </div>
             </div>
         </footer>
@@ -172,4 +241,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
